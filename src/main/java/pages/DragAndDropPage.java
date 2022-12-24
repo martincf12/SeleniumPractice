@@ -2,7 +2,6 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
@@ -11,14 +10,14 @@ public class DragAndDropPage extends TheInternetHomePage {
     @FindBy(id = "column-a")
     WebElement elementA;
 
-    @FindBy(css = "#column-a > header")
-    WebElement elementAText;
+    @FindBy(css = "#columns > div:first-child")
+    WebElement firstElementText;
 
     @FindBy(id = "column-b")
     WebElement elementB;
 
-    @FindBy(css = "#column-b > header")
-    WebElement elementBText;
+    @FindBy(css = "#columns > div:last-child")
+    WebElement secondElementText;
 
     public DragAndDropPage(WebDriver driver) {
         super(driver);
@@ -29,10 +28,10 @@ public class DragAndDropPage extends TheInternetHomePage {
     }
 
     public String getTextFromFirstElement(){
-        return elementAText.getText();
+        return firstElementText.getText();
     }
 
     public String getTextFromSecondElement(){
-        return elementBText.getText();
+        return secondElementText.getText();
     }
 }
