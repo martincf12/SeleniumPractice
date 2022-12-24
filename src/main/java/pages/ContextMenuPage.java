@@ -15,8 +15,7 @@ public class ContextMenuPage extends TheInternetHomePage{
     }
 
     public void rightClickInContextMenu(){
-        Actions actions = new Actions(this.driver);
-        actions.contextClick(contextMenu).perform();
+        new Actions(driver).contextClick(contextMenu).perform();
     }
 
     public String getAlertMessageText(){
