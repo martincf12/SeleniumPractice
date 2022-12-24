@@ -11,4 +11,16 @@ public class TheInternetHomePage {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
+
+    public LoginPage goToLoginPage(){
+        String url = driver.getCurrentUrl()+"/login";
+        this.driver.navigate().to(url);
+        return new LoginPage(driver);
+    }
+
+    public CheckboxesPage goToCheckboxesPage(){
+        String url = driver.getCurrentUrl()+"/checkboxes";
+        this.driver.navigate().to(url);
+        return new CheckboxesPage(driver);
+    }
 }
