@@ -16,6 +16,8 @@ public class TheInternetHomePage {
     @FindBy(css = "li:nth-child(10) > a")
     WebElement dragAndDropHrefLink;
 
+    @FindBy(css = "li:nth-child(11) > a")
+    WebElement dropdownHrefLink;
 
     WebDriver driver;
 
@@ -42,6 +44,11 @@ public class TheInternetHomePage {
     public DragAndDropPage goToDragAndDropPage(){
         dragAndDropHrefLink.click();
         return new DragAndDropPage(driver);
+    }
+
+    public DropdownPage goToDropdownPage(){
+        dropdownHrefLink.click();
+        return new DropdownPage(driver);
     }
 
 
