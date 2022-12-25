@@ -8,7 +8,7 @@ import pages.TheInternetHomePage;
 public class CheckboxTest extends BaseTest{
 
     @Test
-    public void CheckAndUncheckBoxes(){
+    public void checkAndUncheckBoxes(){
         TheInternetHomePage theInternetHomePage = new TheInternetHomePage(driver);
         CheckboxesPage checkboxesPage = theInternetHomePage.goToCheckboxesPage();
         checkboxesPage.clickCheckboxOne();

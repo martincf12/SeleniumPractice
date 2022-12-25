@@ -10,7 +10,7 @@ public class DropdownTest extends BaseTest{
     String OPTION_ONE = "Option 1";
     String OPTION_TWO = "Option 2";
     @Test
-    public void dragAndDrop(){
+    public void dropdownSelection(){
         TheInternetHomePage theInternetHomePage = new TheInternetHomePage(driver);
         DropdownPage dropdownPage = theInternetHomePage.goToDropdownPage();
         dropdownPage.selectOptionByText(OPTION_ONE);

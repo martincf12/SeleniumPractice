@@ -11,7 +11,7 @@ public class DragAndDropTest extends BaseTest{
     String EXPECTED_SECOND_ELEMENT_TEXT = "A";
 
     @Test
-    public void dragAndDrop(){
+    public void dragAndDropElements(){
         TheInternetHomePage theInternetHomePage = new TheInternetHomePage(driver);
         DragAndDropPage dragAndDropPage = theInternetHomePage.goToDragAndDropPage();
         dragAndDropPage.dragElementADropOnElementB();

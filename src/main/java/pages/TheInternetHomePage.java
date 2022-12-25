@@ -19,6 +19,9 @@ public class TheInternetHomePage {
     @FindBy(css = "li:nth-child(11) > a")
     WebElement dropdownHrefLink;
 
+    @FindBy(css = "li:nth-child(12) > a")
+    WebElement dynamicContentHrefLink;
+
     WebDriver driver;
 
     public TheInternetHomePage(WebDriver driver){
@@ -51,5 +54,12 @@ public class TheInternetHomePage {
         return new DropdownPage(driver);
     }
 
+    public DynamicContentPage goToDynamicContentPage(){
+        dynamicContentHrefLink.click();
+        return new DynamicContentPage(driver);
+    }
 
+    public void refreshPage(){
+        driver.navigate().refresh();
+    }
 }
